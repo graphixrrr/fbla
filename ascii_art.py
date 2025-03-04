@@ -1,6 +1,11 @@
-SPACESHIP_INTERIOR = '''
+
+# ASCII art strings for the Cosmic Odyssey game
+# These multiline strings provide visual representations for different game scenes
+
+# ASCII art for the lunar lander spacecraft
+LUNAR_LANDER = '''
     .-------------------.
-    |  [§] Warning [§]  |
+    |  [§] ARTEMIS [§]  |
     |    .-""""""-.    |
     |   /  * ** *  \   |
     |  |  * ### *  |   |
@@ -10,27 +15,30 @@ SPACESHIP_INTERIOR = '''
     '-------------------'
 '''
 
-SPACE_ANOMALY = '''
-      .*  *  . *   .
-    *  \ \ | / /  *
-   .    \-:-/    .
- .     -*-*-*     .
-     ./ /|\ \   *
-   *   / | \   .
-      *  .  *
+# ASCII art representing the lunar surface landscape
+LUNAR_SURFACE = '''
+      .     .        .
+    .   .      .    
+   .      _    .     .
+ .     .-' '-.   .
+     /       \     .
+   .           .
+      .     .
 '''
 
-ADVANCED_CIVILIZATION = '''
+# ASCII art showing a moon cavern with detailed structure
+MOON_CAVERN = '''
           /\\/\\
      ____/  \  \____
     /   /\   \   \  \\
    /___/  \___\   \  \\
-   |  | [] |  |    |[]|
-   |[]|    |[]|    |  |
+   |  | () |  |    |()|
+   |()|    |()|    |  |
    |  |    |  |    |  |
    |  |    |  |    |  |
 '''
 
+# ASCII art for the game over screen
 GAME_OVER = '''
    _____                         ____                 
   / ____|                       / __ \\                
@@ -40,6 +48,8 @@ GAME_OVER = '''
   \\_____|\\__,_|_| |_| |_|\\___| \\____/  \\_/ \\___|_|   
 '''
 
+# Dictionary mapping scene names to their corresponding ASCII art
+# This allows easy access to the appropriate art for each game scene
 SCENE_ART = {
     "start": """
     .  ･ ｡ﾟ☆ ･ ｡｡･
@@ -48,24 +58,26 @@ SCENE_ART = {
    /  \\  ･｡･ﾟ･
   /    \\ ﾟ･｡･ﾟ
  /======\\  ･
-|  SHIP  |
+| ARTEMIS |
 """,
     "computer_check": """
  ___________
-|  ERROR!   |
+|  MISSION  |
 |  ■■■□□□  |
 |===========|
 """,
-    "examine_anomaly": """
+    "examine_surface": """
    .-'-.
  .'     '.
-(         )
+(    ^    )
  '.     .'
    '---'
 """,
-    "contact_civilization": ADVANCED_CIVILIZATION,
-    "observe_civilization": ADVANCED_CIVILIZATION,
+    "enter_cavern": MOON_CAVERN,
+    "deeper_exploration": MOON_CAVERN,
+    "first_steps": LUNAR_SURFACE,
+    "move_to_signal": LUNAR_SURFACE,
     "game_over": GAME_OVER,
-    "return_home": GAME_OVER,
-    "stay_learn": GAME_OVER
+    "final_discovery": GAME_OVER,
+    "report_discovery": GAME_OVER
 }
